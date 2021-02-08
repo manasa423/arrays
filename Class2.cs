@@ -4,24 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pattrans
+namespace PrimeOrNot
 {
-    class Class2
+    class Perfetnum
     {
         static void Main(string[] args)
         {
-            int num = 5;
-             int var = 1;
-            
-            for (int i = 1; i <=num; i++)
+            int num = 6;
+            int sum = 0, temp;
+            temp =num;
+            for (int i = 1; i < 6; i++)
             {
-                for (int j = 1; j <= i;j++)
+                if (num % i == 0)
                 {
-                    Console.Write(var+"\t");
-                    var++;
+                    Console.WriteLine(i);
+                    sum = sum + i;
                 }
-                Console.WriteLine();
             }
+
+            if(sum==temp)
+                {
+                Console.WriteLine($"{num} is a perfect number");
+                 }
+            else
+            {
+                Console.WriteLine($"{num} is noy a perfect number");
+            }
+
         }
     }
 }

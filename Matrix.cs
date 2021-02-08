@@ -4,24 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pattrans
+namespace Array
 {
-    class Class3
+    class Matrix
     {
         static void Main(string[] args)
         {
-            int num = 5;
-            char ch = 'A';
 
-            for (int i = 1; i <= num; i++)
+            int[,] a = { { 1, 2, 3}, { 4, 5, 6 }, { 7, 8, 9} };
+           
+            for (int i = 0; i <a.GetLength(0); i++)
             {
-                for (int j = 1; j <= i; j++)
+                for (int j = 0; j <a. GetLength(1); j++)
                 {
-                    Console.Write(ch + "\t");
-                    ch++;
+                
+                    Console.Write(a[i,j]);
                 }
                 Console.WriteLine();
             }
+
         }
     }
 }

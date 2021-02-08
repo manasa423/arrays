@@ -4,22 +4,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pattrans
+namespace PrimeOrNot
 {
-    class Class1
+    class StrongNum
     {
         static void Main(string[] args)
         {
-            int num = 5;
-            for (int i = 1; i <= num; i++)
+
+
+
+            int num = 145;
+            int temp;
+            int sum = 0;
+            temp = num;
+            while (num != 0)
             {
-                for (int j = 1; j <= i; j++)
+                 int fact = 1;
+                 int digit = num % 10;
+
+                for(int i = 1; i <= digit; i++) 
                 {
-                    Console.Write(i);
+                    fact = fact * i;
+                   
                 }
-                Console.WriteLine();
+
+                sum = sum + fact;
+                num = num / 10;
+            }
+            Console.WriteLine(sum);
+            if (temp == sum)
+            {
+                Console.WriteLine($"{temp} is a strong number");
+            }
+            else
+            {
+                Console.WriteLine($"{temp} is not a strong number");
             }
         }
-        
     }
 }

@@ -4,24 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pattrans
+namespace SumOfFactorOfNum
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // int num = 5;
-             Console.WriteLine("enter your number:");
-            int num = int.Parse(Console.ReadLine());
-
-            for (int i = 1; i <=num; i++)
+            int num = 12;
+            int sum=0;
+          
+            for(int i=1;i<=12;i++)
             {
-                for (int j = 1; j <=i; j++)
+                if(num % i==0)
                 {
-                    Console.Write(j);
+                    sum = sum + i;
+                    
+
                 }
-                Console.WriteLine();
             }
+            Console.WriteLine(sum);
         }
     }
 }
